@@ -90,7 +90,7 @@ ExecStart=/usr/local/bin/lighthouse bn \
   --http \
   --execution-endpoint http://localhost:8551 \
   --execution-jwt /var/lib/jwtsecret/jwt.hex \
-  --checkpoint-sync-url https://<PROJECT-ID>:<PROJECT-SECRET>@eth2-beacon-mainnet.infura.io \
+  --checkpoint-sync-url https://mainnet.checkpoint.sigp.io \
   --metrics
 [Install]
 WantedBy=multi-user.target" >> /etc/systemd/system/lighthousebeacon.service \
