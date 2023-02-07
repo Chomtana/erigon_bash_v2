@@ -58,6 +58,7 @@ ExecStart=/usr/local/bin/erigon/build/bin/erigon \
   --torrent.download.rate 90m \
   --authrpc.jwtsecret=/var/lib/jwtsecret/jwt.hex \
   --metrics 
+  --externalcl
 [Install]
 WantedBy=default.target" >> /etc/systemd/system/erigon.service \
 
