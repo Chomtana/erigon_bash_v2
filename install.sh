@@ -20,14 +20,14 @@ rm go1.19.linux-amd64.tar.gz
 
 #Erigon
 cd ~
-curl -LO https://github.com/ledgerwatch/erigon/archive/refs/tags/v2022.09.02.tar.gz
-tar xvf v2022.09.02.tar.gz
-cd erigon-2022.09.02
+curl -LO https://github.com/ledgerwatch/erigon/archive/refs/tags/v2.38.1.tar.gz
+tar xvf v2.38.1.tar.gz
+cd erigon-2.38.1
 make erigon
 cd ~
-sudo cp -a erigon-2022.09.02 /usr/local/bin/erigon
-rm v2022.09.02.tar.gz
-rm -r erigon-2022.09.02
+sudo cp -a erigon-2.38.1 /usr/local/bin/erigon
+rm v2.38.1.tar.gz
+rm -r erigon-2.38.1
 sudo useradd --no-create-home --shell /bin/false erigon
 sudo mkdir -p /var/lib/erigon
 sudo chown -R erigon:erigon /var/lib/erigon
@@ -65,10 +65,10 @@ WantedBy=default.target" >> /etc/systemd/system/erigon.service \
 #Lighthouse Beacon
 
 cd ~
-curl -LO https://github.com/sigp/lighthouse/releases/download/v3.1.0/lighthouse-v3.1.0-x86_64-unknown-linux-gnu.tar.gz
-tar xvf lighthouse-v3.1.0-x86_64-unknown-linux-gnu.tar.gz
+curl -LO https://github.com/sigp/lighthouse/releases/download/v3.4.0/lighthouse-v3.4.0-x86_64-unknown-linux-gnu.tar.gz
+tar xvf lighthouse-v3.4.0-x86_64-unknown-linux-gnu.tar.gz
 sudo cp lighthouse /usr/local/bin
-rm lighthouse-v3.1.0-x86_64-unknown-linux-gnu.tar.gz
+rm lighthouse-v3.4.0-x86_64-unknown-linux-gnu.tar.gz
 rm lighthouse
 sudo useradd --no-create-home --shell /bin/false lighthousebeacon
 sudo mkdir -p /var/lib/lighthouse/beacon
