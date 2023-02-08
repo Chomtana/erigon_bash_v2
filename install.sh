@@ -43,7 +43,7 @@ Type=simple
 Restart=always
 RestartSec=5
 ExecStart=/usr/local/bin/erigon/build/bin/erigon \
-  --datadir=/var/lib/erigon \
+  --datadir=/mnt/md0/erigon_datadir \
   --rpc.gascap=50000000 \
   --http \
   --ws \
@@ -87,7 +87,7 @@ Restart=always
 RestartSec=5
 ExecStart=/usr/local/bin/lighthouse bn \
   --network mainnet \
-  --datadir /var/lib/lighthouse \
+  --datadir /mnt/md0/lighthouse_datadir \
   --http \
   --execution-endpoint http://localhost:8551 \
   --execution-jwt /var/lib/jwtsecret/jwt.hex \
