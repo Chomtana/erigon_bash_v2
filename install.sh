@@ -57,7 +57,7 @@ ExecStart=/usr/local/bin/erigon/build/bin/erigon \
   --http.corsdomain="*" \
   --torrent.download.rate 90m \
   --authrpc.jwtsecret=/var/lib/jwtsecret/jwt.hex \
-  --metrics 
+  --metrics \
   --externalcl
 [Install]
 WantedBy=default.target" >> /etc/systemd/system/erigon.service \
